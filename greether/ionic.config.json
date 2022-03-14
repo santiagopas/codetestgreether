@@ -1,0 +1,7 @@
+{
+  "name": "greether",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

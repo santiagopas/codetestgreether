@@ -1,0 +1,45 @@
+.mainSlide,
+.mainSlide ion-slide {
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  width: 120px;
+}
+
+.pick-avatar {
+  width: 80px;
+  opacity: 0.3;
+}
+
+.pick-avatar-seleccionado {
+  transition: opacity 0.5s linear;
+  opacity: 1 !important;
+}
+
+ion-list {
+  background: #e5f3f9;
+}
+ion-label {
+  background: white ; 
+  
+}
+
+ion-footer {
+  background: none;
+}
+
+.item-inner{
+  background-color: #e5f3f9 !important;
+}
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-block-start: 100px;
+}
+img{
+  width: 50%;
+}

@@ -15,6 +15,8 @@ export class LoginPage implements OnInit {
 
   @ViewChild('slidePrincipal') slides: IonSlides;
 
+
+
   loginUser = {
     email: 'test@greether',
     password: '123456'
@@ -28,23 +30,26 @@ export class LoginPage implements OnInit {
   };
 
 
-  constructor( private usuarioService: UsuarioService,
-               private navCtrl: NavController,
-               private uiService: UiServiceService ) { }
+  constructor(private usuarioService: UsuarioService,
+    private navCtrl: NavController,
+    private uiService: UiServiceService,
+  ) { }
 
   ngOnInit() {
-  // this.slides.lockSwipes( true );
+    // this.slides.lockSwipes( true );
+
+
   }
 
-  async login( fLogin: NgForm ) {
+  async login(fLogin: NgForm) {
 
-    if ( fLogin.invalid ) { return; }
+    if (fLogin.invalid) { return; }
 
-    const valido = await this.usuarioService.login( this.loginUser.email, this.loginUser.password );
+    const valido = await this.usuarioService.login(this.loginUser.email, this.loginUser.password);
 
-    if ( valido ) {
+    if (valido) {
       // navegar al tabs
-      this.navCtrl.navigateRoot( '/main/tabs/tab1', { animated: true } );
+      this.navCtrl.navigateRoot('/main/tabs/tab1', { animated: true });
     } else {
       // mostrar alerta de usuario y contraseña no correctos
       this.uiService.alertaInformativa('Usuario y contraseña no son correctos.');
@@ -53,15 +58,15 @@ export class LoginPage implements OnInit {
 
   }
 
-  async registro( fRegistro: NgForm ) {
+  async registro(fRegistro: NgForm) {
 
-    if ( fRegistro.invalid ) { return; }
+    if (fRegistro.invalid) { return; }
 
-    const valido = await this.usuarioService.registro( this.registerUser );
+    const valido = await this.usuarioService.registro(this.registerUser);
 
-    if ( valido ) {
+    if (valido) {
       // navegar al tabs
-      this.navCtrl.navigateRoot( '/main/', { animated: true } );
+      this.navCtrl.navigateRoot('main', { animated: true });
     } else {
       // mostrar alerta de usuario y contraseña no correctos
       this.uiService.alertaInformativa('Ese correo electrónico ya existe.');
@@ -80,7 +85,7 @@ export class LoginPage implements OnInit {
   mostrarLogin() {
     // this.slides.lockSwipes(false);
     this.slides.slideTo(1);
-    this.slides.lockSwipes(true);
+    // this.slides.lockSwipes(true);
   }
 
 }

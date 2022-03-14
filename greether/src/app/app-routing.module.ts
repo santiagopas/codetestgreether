@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { UsuarioGuard } from './guards/usuario.guard';
+
 const routes: Routes = [
   {
     path: 'main',
-    loadChildren: () => import('./pages/tabs/tabs.module').then(m => m.TabsPageModule),     canLoad: [ UsuarioGuard ]
+    loadChildren: () => import('./pages/tabs/tabs.module').then(m => m.TabsPageModule),   
+      canLoad: [ UsuarioGuard ]
   },
   {
     path: 'login',
@@ -14,7 +16,7 @@ const routes: Routes = [
     path: '',
     pathMatch: 'full',
     redirectTo: 'login'
-  }
+  },
 ];
 @NgModule({
   imports: [
@@ -22,4 +24,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule {};

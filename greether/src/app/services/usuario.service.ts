@@ -6,19 +6,25 @@ import { environment } from '../../environments/environment';
 import { Usuario } from '../interfaces/interfaces';
 import { NavController } from '@ionic/angular';
 
+
 const URL = environment.url;
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsuarioService {
 
- token: string = null;
- private usuario: Usuario = {};
+  token: string = null;
+  private usuario: Usuario = {};
 
   constructor( private http: HttpClient,
-               private storage: Storage,
-               private navCtrl: NavController ) { }
+                private storage: Storage,
+               private navCtrl: NavController ) {   this.storage.create() }
+
+  async ngOnInit() {
+  
+  }
 
 
   login( email: string, password: string ) {

@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "greether",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

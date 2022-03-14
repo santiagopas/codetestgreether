@@ -8,6 +8,7 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
 import { Tab1PageRoutingModule } from './tab1-routing.module';
 import { ComponentsModule } from 'src/app/components/components.module';
 import { RouterModule } from '@angular/router';
+// import { FileTransfer } from '@ionic-native/file-transfer/ngx';
 
 @NgModule({
   imports: [
@@ -17,6 +18,7 @@ import { RouterModule } from '@angular/router';
     ExploreContainerComponentModule,
     Tab1PageRoutingModule,
     ComponentsModule,
+    // FileTransfer,
     RouterModule.forChild([{path:'', component: Tab1Page}])
   ],
   declarations: [Tab1Page]

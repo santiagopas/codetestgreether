@@ -52,7 +52,7 @@ export class LoginPage implements OnInit {
       this.navCtrl.navigateRoot('/main/tabs/tab1', { animated: true });
     } else {
       // mostrar alerta de usuario y contraseña no correctos
-      this.uiService.alertaInformativa('Usuario y contraseña no son correctos.');
+      this.uiService.alertaInformativa('Username and password are not correct.');
     }
 
 
@@ -69,7 +69,7 @@ export class LoginPage implements OnInit {
       this.navCtrl.navigateRoot('main', { animated: true });
     } else {
       // mostrar alerta de usuario y contraseña no correctos
-      this.uiService.alertaInformativa('Ese correo electrónico ya existe.');
+      this.uiService.alertaInformativa('That email already exists.');
     }
 
 

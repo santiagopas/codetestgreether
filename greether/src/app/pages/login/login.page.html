@@ -33,21 +33,22 @@
                   <ion-input name="email" type="email" [(ngModel)]="loginUser.email" required></ion-input>
                 </ion-item>
 
-                <ion-label class="ion-text-start"
-                >Password</ion-label>
+                <ion-label class="ion-text-start">Password</ion-label>
                 <ion-item>
                   <ion-icon name="lock-closed-outline"></ion-icon>
-                  <ion-input name="password" type="password" [(ngModel)]="loginUser.password" required >
+                  <ion-input name="password" type="password" [(ngModel)]="loginUser.password" required>
                   </ion-input>
                 </ion-item>
-
+                <ion-text class="ion-text-end">
+                  <p> Forgot Password?</p>
+                </ion-text>
               </ion-list>
             </ion-col>
           </ion-row>
 
           <ion-row>
             <ion-col>
-              <ion-button type="submit" color="danger" shape="round">
+              <ion-button class="button" type="submit" color="danger-shade" shape="round">
                 sign in
               </ion-button>
             </ion-col>
@@ -55,10 +56,20 @@
 
         </ion-grid>
 
-        <ion-icon class="social-icon" name="logo-instagram"></ion-icon>
-        <ion-icon class="social-icon" name="logo-facebook"></ion-icon>
-<br>
-        don't have an account? Sign up
+
+        <p class="registerText"> don't have an account?
+          <a class="signUP" size="medium" (click)="mostrarLogin()">
+            Sign up
+          </a>
+        </p>
+        <div class="socialContainer">
+          <a href="https://www.instagram.com/greet.her/" target="_blank" rel="noopener noreferrer">
+            <ion-icon class="social-icon" name="logo-instagram"></ion-icon>
+          </a>
+          <a href="https://www.facebook.com/greetherhere/" target="_blank" rel="noopener noreferrer">
+            <ion-icon class="social-icon" name="logo-facebook"></ion-icon>
+          </a>
+        </div>
       </form>
 
 
@@ -85,7 +96,7 @@
                 </ion-item>
 
                 <ion-item>
-                  <ion-label>Nombre</ion-label>
+                  <ion-label>Name</ion-label>
                   <ion-input name="nombre" type="text" [(ngModel)]="registerUser.nombre" required></ion-input>
                 </ion-item>
 
@@ -107,6 +118,16 @@
           </ion-row>
 
         </form>
+        <p class="registerText"> already have an account?
+          <a class="signUP" size="medium" (click)="mostrarRegistro()">
+            Sign in
+          </a>
+        </p>
+        <!-- <p class="registerText">Already have an account?
+          <a color="signUP" size="medium" (click)="mostrarRegistro()">
+            Sign in
+          </a>
+        </p> -->
       </ion-grid>
 
     </ion-slide>
@@ -126,17 +147,17 @@
     <ion-row>
 
       <ion-col>
-        <ion-button shape="round" expand="full" size="small" fill="outline" color="tertiary"
+        <!-- <ion-button shape="round" expand="full" size="small" fill="outline" color="tertiary"
           (click)="mostrarRegistro()">
           Login
-        </ion-button>
+        </ion-button> -->
       </ion-col>
 
-      <ion-col>
-        <ion-button shape="round" expand="full" size="small" fill="outline" color="tertiary" (click)="mostrarLogin()">
+      <!-- <ion-col>
+         <ion-button shape="round" expand="full" size="small" fill="outline" color="tertiary" (click)="mostrarLogin()">
           Register
-        </ion-button>
-      </ion-col>
+        </ion-button> 
+      </ion-col>-->
 
     </ion-row>
 

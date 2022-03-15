@@ -90,18 +90,18 @@
 
               <ion-list>
 
+                <ion-label>Email</ion-label>
                 <ion-item>
-                  <ion-label>Email</ion-label>
                   <ion-input name="email" type="email" [(ngModel)]="registerUser.email" required></ion-input>
                 </ion-item>
 
+                <ion-label>Name</ion-label>
                 <ion-item>
-                  <ion-label>Name</ion-label>
                   <ion-input name="nombre" type="text" [(ngModel)]="registerUser.nombre" required></ion-input>
                 </ion-item>
 
+                <ion-label>Password</ion-label>
                 <ion-item>
-                  <ion-label>Password</ion-label>
                   <ion-input name="password" type="password" [(ngModel)]="registerUser.password" required></ion-input>
                 </ion-item>
 
@@ -111,8 +111,8 @@
 
           <ion-row>
             <ion-col>
-              <ion-button type="submit" color="tertiary" shape="round">
-                Crear usuario
+              <ion-button type="submit" color="red" shape="round">
+               Create User
               </ion-button>
             </ion-col>
           </ion-row>

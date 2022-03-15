@@ -8,7 +8,7 @@
       <ion-button (click)="crearPost()"
                   [disabled]="post.mensaje.length < 1 || cargandoGeo"
                   color="primary">
-        Compartir
+        Share
       </ion-button>
     </ion-buttons>
 
@@ -38,7 +38,7 @@
 
 
   </ion-list>
-
+<div class="wrapper">
   <ion-row>
     <ion-col size="6">
       <ion-button 
@@ -62,7 +62,7 @@
       </ion-button>
     </ion-col>
   </ion-row>
-  
+</div>
   <ion-row>
     <ion-col size="3" *ngFor="let image of tempImages">
       <ion-card>
